@@ -6,7 +6,9 @@
 
 VERSION="$2"
 CURRENT_DIR="${pwd}"
-APPD_HOME="/home/ubuntu1/appdynamics"
+HOSTNAME="$(id -u -n)"
+USER_HOME="/home/${HOSTNAME}"
+APPD_HOME="${USER_HOME}/appdynamics"
 EVENTS_SERVICE_HOME="${APPD_HOME}/$2/events-service"
 EUM_HOME="${APPD_HOME}/$2/EUM"
 CONTROLLER_HOME="${APPD_HOME}/$2/Controller"
