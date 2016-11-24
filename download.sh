@@ -39,23 +39,48 @@ _clean_all()
 
 _downloadController()
 {
-    eval "wget --content-disposition --load-cookies cookies.txt https://aperture.appdynamics.com/download/prox/download-file/controller/${VERSION}/controller_64bit_linux-${VERSION}.sh"
-    eval "mv controller_64bit_linux-* controller_64bit_linux.sh"
+    file="${APPD_ENV_HOME}/controller_64bit_linux.sh"
+    
+    if [ -f "$file" ]
+    then
+        echo "$file found. Skipping controller package download."
+    else
+        echo "$file not found. Downloading controller package."
+        eval "wget --content-disposition --load-cookies cookies.txt https://aperture.appdynamics.com/download/prox/download-file/controller/${VERSION}/controller_64bit_linux-${VERSION}.sh"
+        eval "mv controller_64bit_linux-* controller_64bit_linux.sh"
+    fi
+    
     return
 }
 
 _downloadEventsService()
 {
-    eval "wget --content-disposition --load-cookies cookies.txt 'https://aperture.appdynamics.com/download/prox/download-file/events-service/${VERSION}/events-service-${VERSION}.zip'"
-    eval "mv events-service* events-service.zip"
+    file="${APPD_ENV_HOME}/events-service.zip"
+    
+    if [ -f "$file" ]
+    then
+        echo "$file found. Skipping events-service package download."
+    else
+        echo "$file not found. Downloading events-service package."
+        eval "wget --content-disposition --load-cookies cookies.txt 'https://aperture.appdynamics.com/download/prox/download-file/events-service/${VERSION}/events-service-${VERSION}.zip'"
+        eval "mv events-service* events-service.zip"
+    fi
 
     return
 }
 
 _downloadEUM()
 {
-    eval "wget --content-disposition --load-cookies cookies.txt  'https://aperture.appdynamics.com/download/prox/download-file/euem-processor/${VERSION}/euem-64bit-linux-${VERSION}.sh'"
-    eval "mv euem-64bit-linux* euem-64bit-linux.sh"
+    file="${APPD_ENV_HOME}/euem-64bit-linux.sh"
+    
+    if [ -f "$file" ]
+    then
+        echo "$file found. Skipping EUM Server package download."
+    else
+        echo "$file not found. Downloading EUM server package."
+        eval "wget --content-disposition --load-cookies cookies.txt  'https://aperture.appdynamics.com/download/prox/download-file/euem-processor/${VERSION}/euem-64bit-linux-${VERSION}.sh'"
+        eval "mv euem-64bit-linux* euem-64bit-linux.sh"
+    fi
 
     return
 }
