@@ -9,6 +9,7 @@ CURRENT_DIR="${pwd}"
 HOSTNAME="$(id -u -n)"
 USER_HOME="/home/${HOSTNAME}"
 APPD_HOME="${USER_HOME}/appdynamics"
+APPD_EVN_HOME="${APPD_HOME}/${VERSION}"
 EVENTS_SERVICE_HOME="${APPD_HOME}/$2/events-service"
 EUM_HOME="${APPD_HOME}/$2/EUM"
 CONTROLLER_HOME="${APPD_HOME}/$2/Controller"
@@ -95,6 +96,22 @@ sleep 10
 return
 }
 
+_setup()
+{
+    eval "sh ./download.sh all $2 $3 $4"
+    eval "sh ./installer.sh all $2 $5"
+    
+    return
+}
+
+_purge()
+{
+    eval "sh ./appd.sh stop ${VERSION}"
+    eval "rm -rf ${APPD_EVN_HOME}"
+
+    return
+}
+
 ########################
 
 case $1 in
@@ -106,6 +123,10 @@ case $1 in
         _stopEUM
         _stopEventsService
         _stopController ;;
+    setup)
+        _setup $*;;
+    purge)
+        _purge;;
     *)
         echo "usage: appd.sh [start|stop] <4.x.x.x>"
 	echo ;;
