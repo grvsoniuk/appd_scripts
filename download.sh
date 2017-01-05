@@ -62,8 +62,14 @@ _downloadEventsService()
         echo "$file found. Skipping events-service package download."
     else
         echo "$file not found. Downloading events-service package."
-        eval "wget --content-disposition --load-cookies cookies.txt 'https://aperture.appdynamics.com/download/prox/download-file/events-service/${VERSION}/events-service-${VERSION}.zip'"
-        eval "mv events-service* events-service.zip"
+        if eval "wget --content-disposition --load-cookies cookies.txt 'https://aperture.appdynamics.com/download/prox/download-file/events-service/$2/events-service-$2.zip'"; then
+            eval "mv events-service* events-service.zip"
+        else
+            echo "events-service download failed!. Trying now with previous available version."
+            prev=`echo ${VERSION} | sed 's/\(.*\)\..*/\1/'`
+            prev="${prev}.0"
+            _downloadEventsService $1 ${prev} $3 $4
+        fi
     fi
 
     return
@@ -78,8 +84,14 @@ _downloadEUM()
         echo "$file found. Skipping EUM Server package download."
     else
         echo "$file not found. Downloading EUM server package."
-        eval "wget --content-disposition --load-cookies cookies.txt  'https://aperture.appdynamics.com/download/prox/download-file/euem-processor/${VERSION}/euem-64bit-linux-${VERSION}.sh'"
-        eval "mv euem-64bit-linux* euem-64bit-linux.sh"
+        if eval "wget --content-disposition --load-cookies cookies.txt  'https://aperture.appdynamics.com/download/prox/download-file/euem-processor/${VERSION}/euem-64bit-linux-${VERSION}.sh'"; then
+            eval "mv euem-64bit-linux* euem-64bit-linux.sh"
+        else
+            echo "EUM server download failed!. Trying now with previous available version."
+            prev=`echo ${VERSION} | sed 's/\(.*\)\..*/\1/'`
+            prev="${prev}.0"
+            _downloadEUM $1 ${prev} $3 $4
+        fi
     fi
 
     return
