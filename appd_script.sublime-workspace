@@ -1,0 +1,312 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"C",
+				"CONTROLLER_HOME"
+			],
+			[
+				"_",
+				"_downloadEventsService"
+			],
+			[
+				"the",
+				"then"
+			],
+			[
+				"Downloa",
+				"download"
+			],
+			[
+				"APP",
+				"APPD_EVN_HOME"
+			],
+			[
+				"eu",
+				"euem-64bit-linux"
+			],
+			[
+				"ev",
+				"events-service"
+			],
+			[
+				"con",
+				"controller_64bit_linux"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 139.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/ubuntu1/appdynamics/appd_scripts"
+	],
+	"file_history":
+	[
+		"/home/ubuntu1/appdynamics/appd_scripts/installer.sh",
+		"/home/ubuntu1/appdynamics/appd_scripts/appd.sh",
+		"/home/ubuntu1/appdynamics/appd_scripts/download.sh",
+		"/home/ubuntu1/appdynamics/appd_scripts/eum.varfile",
+		"/home/ubuntu1/eum_tmp.varfile",
+		"/home/ubuntu1/Downloads/4.2.12.1/euem-64bit-linux.sh",
+		"/home/ubuntu1/Downloads/controller_64bit_linux-4.2.12.0.sh",
+		"/home/ubuntu1/appdynamics/4.2.12.0/events-service/conf/events-service-api-store.properties",
+		"/home/ubuntu1/appdynamics/4.2.9.2/EUM/eum-processor/bin/eum.properties",
+		"/home/ubuntu1/appdynamics/appd_scripts/controller.varfile",
+		"/home/ubuntu1/appdynamics/4.2.11.0/Controller/platform_admin/playbooks/es_orcha_files/restart-es.orcha",
+		"/home/ubuntu1/appdynamics/4.2.11.0/Controller/platform_admin/bin/platform-admin.sh",
+		"/home/ubuntu1/appdynamics/4.2.3.1/Controller/license.lic",
+		"/home/ubuntu1/appdynamics/4.3.0.0/EUM/eum-processor/bin/eum.properties",
+		"/home/ubuntu1/appdynamics/4.3.0.0/Controller/install.log",
+		"/home/ubuntu1/appdynamics/4.3.0.0/Controller/.passwordfile",
+		"/home/ubuntu1/appdynamics/4.3.0.0/Controller/.shared_secret",
+		"/home/ubuntu1/appdynamics/4.3.0.0/Controller/db/db.cnf",
+		"/home/ubuntu1/appdynamics/4.3.0.0/Controller/db/INSTALL-BINARY",
+		"/home/ubuntu1/Downloads/4.3.0.0/controller_64bit_linux.sh",
+		"/home/ubuntu1/appdynamics/4.2.8.0/Controller/install.log",
+		"/home/ubuntu1/appdynamics/4.3.0.0/events-service/conf/events-service-api-store.properties",
+		"/home/ubuntu1/appdynamics/4.2.9.0/events-service/conf/events-service-api-store.yml",
+		"/home/ubuntu1/appdynamics/4.2.9.0/events-service/conf/events-service-api-store.properties",
+		"/home/ubuntu1/appdynamics/license/license.lic",
+		"/home/ubuntu1/appdynamics/4.2.8.0/Controller/appserver/glassfish/domains/domain1/config/cacert-list.txt",
+		"/home/ubuntu1/Downloads/wget-log",
+		"/home/ubuntu1/launcher.sh",
+		"/home/ubuntu1/appd.sh",
+		"/home/ubuntu1/installer.sh",
+		"/home/ubuntu1/eum.varfile",
+		"/home/ubuntu1/appdynamics/4.2.4.0/EUM/eum-processor/bin/eum.properties",
+		"/home/ubuntu1/download.sh",
+		"/home/ubuntu1/appdynamics/4.2.7.0/Controller/logs/server.log",
+		"/home/ubuntu1/appdynamics/4.2.3.1/Controller/platform_admin/platform-admin-startup.log",
+		"/home/ubuntu1/appdynamics/4.2.3.1/Controller/platform_admin/orcha-modules/bin/orcha-modules",
+		"/home/ubuntu1/appdynamics/4.2.3.1/Controller/platform_admin/conf/PlatformAdminApplication.yml",
+		"/home/ubuntu1/appdynamics/4.2.3.0/Controller/platform_admin/playbooks/es_orcha_files/host_requirements/prod-host-requirements.groovy",
+		"/home/ubuntu1/appdynamics/4.2.7.0/events-service/conf/events-service-api-store.properties",
+		"/home/ubuntu1/appdynamics/4.2.3.0/Controller/platform_admin/platform-admin-startup.log",
+		"/home/ubuntu1/appdynamics/4.2.3.0/Controller/platform_admin/orcha-modules/bin/orcha-modules",
+		"/home/ubuntu1/appdynamics/4.2.7.0/EUM/eum-processor/bin/geo-ip-mappings.xml",
+		"/home/ubuntu1/appdynamics/4.2.7.0/EUM/eum-processor/bin/eum-processor-launcher.vmoptions",
+		"/home/ubuntu1/appdynamics/4.2.7.0/EUM/eum-processor/bin/logback.xml",
+		"/home/ubuntu1/appdynamics/4.2.3.0/Controller/platform_admin/conf/PlatformAdminApplication.yml",
+		"/home/ubuntu1/appdynamics/4.2.6.0/EUM/eum-processor/bin/eum.properties",
+		"/home/ubuntu1/appdynamics/4.2.7.0/EUM/eum-processor/conf/local-eum-processor.yml",
+		"/home/ubuntu1/appdynamics/4.2.2.0/Controller/events_service/conf/events-service-api-store.properties",
+		"/home/ubuntu1/appdynamics/4.2.7.0/EUM/eum-processor/bin/eum.properties",
+		"/home/ubuntu1/appdynamics/4.2.6.1/EUM/eum-processor/bin/geo-ip-mappings.xml",
+		"/home/ubuntu1/appdynamics/4.1.5.0/Controller/appserver/glassfish/domains/domain1/config/domain.xml",
+		"/home/ubuntu1/appdynamics/4.2.6.0/EUM/eum-processor/bin/eum-processor-launcher.vmoptions",
+		"/home/ubuntu1/Downloads/4.1.3.1/events-service/conf/events-service-all.properties",
+		"/home/ubuntu1/appdynamics/4.1.3.1/events-service/conf/events-service-all.properties",
+		"/home/ubuntu1/appdynamics/4.1.3.1/Controller/appserver/glassfish/domains/domain1/config/domain.xml",
+		"/home/ubuntu1/appdynamics/4.1.3.1/events-service/conf/events-service-api-store.properties",
+		"/home/ubuntu1/appdynamics/4.2.5.0/EUM/eum-processor/bin/eum.properties",
+		"/home/ubuntu1/appdynamics/4.2.5.0/EUM/logs/eum-processor.log",
+		"/home/ubuntu1/appdynamics/4.2.5.0/events-service/conf/events-service-api-store.yml",
+		"/home/ubuntu1/appdynamics/4.2.5.0/events-service/conf/events-service-api-store.properties",
+		"/home/ubuntu1/appdynamics/4.2.6.0/EUM/eum-processor/bin/ESAPI.properties",
+		"/home/ubuntu1/appdynamics/4.2.6.0/EUM/eum-processor/bin/eum.sh",
+		"/home/ubuntu1/appdynamics/4.2.6.0/EUM/eum-processor/conf/local-eum-processor.yml",
+		"/home/ubuntu1/Downloads/4.2.5.0/euem-64bit-linux.sh",
+		"/home/ubuntu1/appdynamics/4.2.6.0/EUM/eum-processor/bin/c3p0.xml",
+		"/home/ubuntu1/appdynamics/4.2.6.0/EUM/eum-processor/bin/Metering.properties",
+		"/home/ubuntu1/appdynamics/4.2.4.0/EUM/eum-processor/bin/eum-credential-key.sh",
+		"/home/ubuntu1/appdynamics/4.2.5.0/Controller/appserver/glassfish/domains/domain1/config/domain.xml",
+		"/home/ubuntu1/appdynamics/4.2.4.0/events-service/conf/events-service-api-store.properties",
+		"/home/ubuntu1/appdynamics/4.2.3.3/Controller/appserver/glassfish/domains/domain1/config/domain.xml",
+		"/home/ubuntu1/appdynamics/4.2.4.0/Controller/license.lic",
+		"/home/ubuntu1/appdynamics/4.2.4.0/EUM/eum-processor/bin/eum-processor",
+		"/home/ubuntu1/appdynamics/4.2.4.0/Controller/appserver/glassfish/domains/domain1/config/domain.xml",
+		"/home/ubuntu1/appdynamics/4.2.4.0/EUM/eum-processor/bin/liquibase.properties",
+		"/home/ubuntu1/appdynamics/4.2.4.0/Controller/logs/server.log"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"This text field must not be left empty",
+			"wget",
+			"varfile",
+			"restart-events-service",
+			"mobil",
+			"syn",
+			"synt",
+			"synth",
+			"eum",
+			"synthe",
+			"Following values are not specified:",
+			"digi",
+			"cors",
+			"VARFILE",
+			"secret",
+			"$3",
+			"ubuntu1",
+			"sh",
+			"$2",
+			"}\"",
+			"_install",
+			"failed to ",
+			"auth",
+			"66.178",
+			"12288",
+			"eum",
+			"done trying",
+			"synth",
+			"Cannot",
+			"Variable changed:",
+			"Cannot",
+			"Cannot create credential key",
+			"Cannot create credential key ",
+			"store"
+		],
+		"highlight": true,
+		"in_selection": true,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$*",
+			"_download"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "appd_script.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 201.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 392.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

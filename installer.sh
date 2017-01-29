@@ -11,11 +11,12 @@ APPD_HOME="${USER_HOME}/appdynamics"
 APPD_ENV_HOME="${APPD_HOME}/$2"
 PASSWORD="$3"
 LICENSE_PATH="${APPD_HOME}/license/license.lic"
+CONTROLLER_HOME="${APPD_HOME}/$2/Controller"
 
 set_java_home()
 {
     echo "setting up JAVA_HOME..."
-    eval "export JAVA_HOME=/home/${HOSTNAME}/java"
+    eval "export JAVA_HOME=${CONTROLLER_HOME}/jre8"
     echo "JAVA_HOME set"
     echo "using JAVA_HOME as $JAVA_HOME"
 
@@ -27,7 +28,6 @@ swap_configs()
     echo "Swaping events-service config file..."
     rm ${APPD_ENV_HOME}/events-service/conf/events-service-api-store.properties
     mv ${APPD_ENV_HOME}/events-service/conf/events-service-api-store-tmp.properties ${APPD_ENV_HOME}/events-service/conf/events-service-api-store.properties
-    cd ${APPD_ENV_HOME}/events-service
     echo "events-service config file swapped"
 
     return
@@ -45,9 +45,9 @@ _modifyVarfile()
     if [ "$1" != "controller" ]
     then
       KEY=`${APPD_ENV_HOME}/Controller/db/bin/mysql -uroot -p${PASSWORD} -s -N -e "SELECT value FROM global_configuration where name='appdynamics.es.eum.key'" controller`
-      sed -e "s/\${PASSWORD}/${PASSWORD}/" -e "s/\${HOST}/${HOSTNAME}/" -e "s|\${KEY}|${KEY}|g" -e "s|\${ENV_HOME}|${APPD_ENV_HOME}|g" "${USER_HOME}/eum.varfile"  > ${USER_HOME}/eum_tmp.varfile
+      sed -e "s/\${PASSWORD}/${PASSWORD}/" -e "s/\${HOST}/${HOSTNAME}/" -e "s|\${KEY}|${KEY}|g" -e "s|\${ENV_HOME}|${APPD_ENV_HOME}|g" "./eum.varfile"  > ${USER_HOME}/eum_tmp.varfile
     else
-      sed -e "s/\${PASSWORD}/${PASSWORD}/" -e "s/\${HOST}/${HOSTNAME}/" -e "s|\${ENV_HOME}|${APPD_ENV_HOME}|g" "${USER_HOME}/controller.varfile" > ${USER_HOME}/controller_tmp.varfile
+      sed -e "s/\${PASSWORD}/${PASSWORD}/" -e "s/\${HOST}/${HOSTNAME}/" -e "s|\${ENV_HOME}|${APPD_ENV_HOME}|g" "./controller.varfile" > ${USER_HOME}/controller_tmp.varfile
     fi
     
     return
@@ -90,8 +90,8 @@ _installEUM()
     sed -e "s|ad.accountmanager.key.eum=|ad.accountmanager.key.eum=${KEY}|g" "${APPD_ENV_HOME}/events-service/conf/events-service-api-store.properties" > ${APPD_ENV_HOME}/events-service/conf/events-service-api-store-tmp.properties
     swap_configs
     set_java_home
-    ./bin/events-service.sh stop
-    ./bin/events-service.sh start -p ./conf/events-service-api-store.properties &
+    eval "${APPD_ENV_HOME}/events-service/bin/events-service.sh stop"
+    eval "${APPD_ENV_HOME}/events-service/bin/events-service.sh start -p ${APPD_ENV_HOME}/events-service/conf/events-service-api-store.properties &"
     eval "sh ${USER_HOME}/Downloads/${2}/euem-64bit-linux.sh -q -varfile ${USER_HOME}/eum_tmp.varfile"
     eval "rm ${USER_HOME}/eum_tmp.varfile"
     
@@ -106,7 +106,6 @@ _provision_license()
     ./bin/provision-license ${LICENSE_PATH}
 }
 ########################
-
 prepare
 
 case $1 in

@@ -16,7 +16,8 @@ _prepare()
 {
     eval "mkdir -p ${APPD_ENV_HOME}"
     eval "cd ${APPD_ENV_HOME}"
-    eval "wget --save-cookies cookies.txt  --post-data 'username=${USERNAME}&password=${PASSWORD}' 'https://login.appdynamics.com/sso/login/'"
+    eval "curl -c cookies.txt -d 'username=${USERNAME}&password=${PASSWORD}' https://login.appdynamics.com/sso/login/"
+    #eval "wget --save-cookies cookies.txt  --post-data 'username=${USERNAME}&password=${PASSWORD}' 'https://login.appdynamics.com/sso/login/'"
 
     return
 }
@@ -46,7 +47,8 @@ _downloadController()
         echo "$file found. Skipping controller package download."
     else
         echo "$file not found. Downloading controller package."
-        eval "wget --content-disposition --load-cookies cookies.txt https://aperture.appdynamics.com/download/prox/download-file/controller/${VERSION}/controller_64bit_linux-${VERSION}.sh"
+        eval "curl -L -O -b cookies.txt https://aperture.appdynamics.com/download/prox/download-file/controller/${VERSION}/controller_64bit_linux-${VERSION}.sh"
+        #eval "wget --content-disposition --load-cookies cookies.txt https://aperture.appdynamics.com/download/prox/download-file/controller/${VERSION}/controller_64bit_linux-${VERSION}.sh"
         eval "mv controller_64bit_linux-* controller_64bit_linux.sh"
     fi
     
@@ -62,7 +64,8 @@ _downloadEventsService()
         echo "$file found. Skipping events-service package download."
     else
         echo "$file not found. Downloading events-service package."
-        if eval "wget --content-disposition --load-cookies cookies.txt 'https://aperture.appdynamics.com/download/prox/download-file/events-service/$2/events-service-$2.zip'"; then
+        if eval "curl -L -O -b cookies.txt 'https://aperture.appdynamics.com/download/prox/download-file/events-service/$2/events-service-$2.zip'"; then
+        #if eval "wget --content-disposition --load-cookies cookies.txt 'https://aperture.appdynamics.com/download/prox/download-file/events-service/$2/events-service-$2.zip'"; then
             eval "mv events-service* events-service.zip"
         else
             echo "events-service download failed!. Trying now with previous available version."
@@ -84,7 +87,8 @@ _downloadEUM()
         echo "$file found. Skipping EUM Server package download."
     else
         echo "$file not found. Downloading EUM server package."
-        if eval "wget --content-disposition --load-cookies cookies.txt  'https://aperture.appdynamics.com/download/prox/download-file/euem-processor/${VERSION}/euem-64bit-linux-${VERSION}.sh'"; then
+        if eval "curl -L -O -b cookies.txt 'https://aperture.appdynamics.com/download/prox/download-file/euem-processor/${VERSION}/euem-64bit-linux-${VERSION}.sh'"; then
+        #if eval "wget --content-disposition --load-cookies cookies.txt  'https://aperture.appdynamics.com/download/prox/download-file/euem-processor/${VERSION}/euem-64bit-linux-${VERSION}.sh'"; then
             eval "mv euem-64bit-linux* euem-64bit-linux.sh"
         else
             echo "EUM server download failed!. Trying now with previous available version."

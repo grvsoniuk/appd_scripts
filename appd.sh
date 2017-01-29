@@ -16,7 +16,7 @@ CONTROLLER_HOME="${APPD_HOME}/$2/Controller"
 
 _set_java_home()
 {
-    export JAVA_HOME=/home/ubuntu1/java
+    eval "export JAVA_HOME=${CONTROLLER_HOME}/jre8"
     return
 }
 
