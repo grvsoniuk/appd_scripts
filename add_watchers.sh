@@ -1,7 +1,16 @@
 TICKET=$1
-USER="<USERNAME>"
-PASSWORD="<PASSWORD>"
-array=( "rpetty" "gaurav.soni" "deepanshu.grover" "hari.subramaniam" "michael.perlstein" "mayuresh.kshirsagar" "clal@appdynamics.com" "mohammed.rayan" "amit.jha" "don.altman" )
+TEAM=$2
+USER="gaurav.soni@appdynamics.com"
+PASSWORD="CEKssn4D"
+
+if [ -z "$1" ]
+  then
+    echo "Usage: sh ./add_watchers.sh <JIRA Ticket> <Team File Path>"
+    echo "Example: sh ./add_watchers.sh CORE-77004 ./eum-team.txt"
+    exit 1
+fi
+
+IFS=$'\r\n' GLOBIGNORE='*' command eval  'array=($(cat $TEAM))'
 
 nohup echo "------------------------------------------------------------------------------------------------------------"
 nohup echo "Date : $(date)"
