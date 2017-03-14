@@ -1,7 +1,7 @@
 TICKET=$1
 TEAM=$2
-USER="gaurav.soni@appdynamics.com"
-PASSWORD="CEKssn4D"
+USER="<USER>"
+PASSWORD="<PASSWORD>"
 
 if [ -z "$1" ]
   then

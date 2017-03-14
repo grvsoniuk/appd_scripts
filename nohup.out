@@ -390,3 +390,197 @@ Set-Cookie: JSESSIONID=D553D754DF4A7D57D7F60EA89F394AC4; Path=/; Secure; HttpOnl
 Set-Cookie: atlassian.xsrf.token=AG87-S37R-QM8W-6VWE|d2d1f5bf0ae97b736bae891e57e25368e701f36b|lin; Path=/; Secure
 Strict-Transport-Security: max-age=315360000;includeSubDomains
 
+------------------------------------------------------------------------------------------------------------
+Date : Tue 14 Mar 2017 13:18:37 GMT
+Ticket : CORE-94308
+------------------------------------------------------------------------------------------------------------
+>> Adding rpetty as watcher...
+>> Adding gaurav.soni as watcher...
+>> Adding deepanshu.grover as watcher...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0>> Adding hari.subramaniam as watcher...
+>> Adding michael.perlstein as watcher...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    L>> Adding mayuresh.kshirsagar as watcher...
+eft  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0>> Adding clal@appdynamics.com as watcher...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0>> Adding mohammed.rayan as watcher...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0>> Adding amit.jha as watcher...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0>> Adding don.altman as watcher...
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100    16    0     0  100    16      0      7  0:00:02  0:00:02 --:--:--     7100    18    0     0  100    18      0      8  0:00:02  0:00:02 --:--:--     8100    18    0     0  100    18      0      8  0:00:02  0:00:02 --:--:--     8100     8    0     0  100     8      0      3  0:00:02  0:00:02 --:--:--     3111111000000000    0  00           11 13   90   21 12      2  2          0 0 0    0 0      0            0        0 00 1   0  101   00  00  0 1 0   2 0  1120    1  0 10   1 09    0    1     2   3   2100     0                0            0  00     9  5           80   :    1 0 :00:50  0000  ::040:200    0: 000:000:2:0 :2   :000:00:00002202 ::0 0-20 :  0 20 -: :00-00-0:0:-00::-0::020- :22-- -0 - -  -:-:-:-02- : --- :9--:- -: ---- :  - - -  : 5 - 8 - : ---   5     4 10100    18    0     0  100    18      0      8  0:00:02  0:00:02 --:--:--     8
+HTTP/1.1 204 No Content
+Server: nginx
+Date: Tue, 14 Mar 2017 13:18:39 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+X-AREQUESTID: 378x152265x2
+X-AUSERNAME: gaurav.soni
+X-ATENANT-ID: singularity.jira.com
+Cache-Control: no-cache, no-store, no-transform
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID=973E1D4A62E4575669DEF35807B6D66B; Path=/; Secure; HttpOnly
+Set-Cookie: atlassian.xsrf.token=AG87-S37R-QM8W-6VWE|b585a0dcb3324513e0478fab4aa7252c351910d9|lin; Path=/; Secure
+Strict-Transport-Security: max-age=315360000;includeSubDomains
+
+100    13    0     0  100    13      0      5  0:00:02  0:00:02 --:--:--     5
+HTTP/1.1 204 No Content
+Server: nginx
+Date: Tue, 14 Mar 2017 13:18:39 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+X-AREQUESTID: 378x152270x7
+X-AUSERNAME: gaurav.soni
+X-ATENANT-ID: singularity.jira.com
+Cache-Control: no-cache, no-store, no-transform
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID=40173DF4F5FC2A9726D89A22F56E229A; Path=/; Secure; HttpOnly
+Set-Cookie: atlassian.xsrf.token=AG87-S37R-QM8W-6VWE|43dc27ceef891aa7368e2652a3af50fdcc142dc6|lin; Path=/; Secure
+Strict-Transport-Security: max-age=315360000;includeSubDomains
+
+100    16    0     0  100   10 11061 0100 0 0 0       1        2922     0     8   1  0      0        60    00        :0 0 0     01:0000         22  1 01200 0 0   :  010  0  0   8    0 :0 01 92     - - :  - 2-10:  - -                 6   
+  8 30      0 HTTP/1.1 204 No Content
+Server: nginx
+Date: Tue, 14 Mar 2017 13:18:39 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+X-AREQUESTID: 378x152264x1
+X-AUSERNAME: gaurav.soni
+X-ATENANT-ID: singularity.jira.com
+Cache-Control: no-cache, no-store, no-transform
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID=2A111420B00C2C3E98BE84AD5854B839; Path=/; Secure; HttpOnly
+Set-Cookie: atlassian.xsrf.token=AG87-S37R-QM8W-6VWE|a8d501969f262e343f55661fa3750d1bb81cf9df|lin; Path=/; Secure
+Strict-Transport-Security: max-age=315360000;includeSubDomains
+
+ 0:00:00: 0  :70 2  0   2   0 0::0000 :080 : 000:2: : 00020 :00:20 0-:---2:  0-0:2-:-0:--- 0 --::0-: - -2:--  --     - :  --: 3 
+8- 
+-7HTTP/1.1 204 No Content
+Server: nginx
+Date: Tue, 14 Mar 2017 13:18:39 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+X-AREQUESTID: 378x152267x4
+X-AUSERNAME: gaurav.soni
+X-ATENANT-ID: singularity.jira.com
+Cache-Control: no-cache, no-store, no-transform
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID=B692CD833707C295C70400A599397273; Path=/; Secure; HttpOnly
+Set-Cookie: atlassian.xsrf.token=AG87-S37R-QM8W-6VWE|5ca494967b8440dd12057bc47ba81d1d9bbba31e|lin; Path=/; Secure
+Strict-Transport-Security: max-age=315360000;includeSubDomains
+
+ 
+  HTTP/1.1 204 No Content
+Server: nginx
+Date: Tue, 14 Mar 2017 13:18:39 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+X-AREQUESTID: 378x152272x9
+X-AUSERNAME: gaurav.soni
+X-ATENANT-ID: singularity.jira.com
+Cache-Control: no-cache, no-store, no-transform
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID=87DA609FDAEECDE7E94A1858DF93B72A; Path=/; Secure; HttpOnly
+Set-Cookie: atlassian.xsrf.token=AG87-S37R-QM8W-6VWE|be7f281da11be0e8666d4d8c868a2716e14a0ac6|lin; Path=/; Secure
+Strict-Transport-Security: max-age=315360000;includeSubDomains
+
+  HTTP/1.1 204 No Content
+Server: nginx
+Date: Tue, 14 Mar 2017 13:18:39 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+X-AREQUESTID: 378x152268x5
+X-AUSERNAME: gaurav.soni
+X-ATENANT-ID: singularity.jira.com
+Cache-Control: no-cache, no-store, no-transform
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID=4FA8C5D6B28BCF045600C226EAA8A85D; Path=/; Secure; HttpOnly
+Set-Cookie: atlassian.xsrf.token=AG87-S37R-QM8W-6VWE|beee08dbfd5e082adbb445679c847916a969d6a2|lin; Path=/; Secure
+Strict-Transport-Security: max-age=315360000;includeSubDomains
+
+8
+HTTP/1.1 204 No Content
+Server: nginx
+Date: Tue, 14 Mar 2017 13:18:39 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+X-AREQUESTID: 378x152273x10
+X-AUSERNAME: gaurav.soni
+X-ATENANT-ID: singularity.jira.com
+Cache-Control: no-cache, no-store, no-transform
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID=701F1D8C14F6737576D2F01D8A41886F; Path=/; Secure; HttpOnly
+Set-Cookie: atlassian.xsrf.token=AG87-S37R-QM8W-6VWE|8ea04048d382d40462ecf6135cd627698e684bb8|lin; Path=/; Secure
+Strict-Transport-Security: max-age=315360000;includeSubDomains
+
+100    10    0     0  100    10      0      3  0:00:03  0:00:02  0:00:01     3
+HTTP/1.1 204 No Content
+Server: nginx
+Date: Tue, 14 Mar 2017 13:18:39 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+X-AREQUESTID: 378x152269x6
+X-AUSERNAME: gaurav.soni
+X-ATENANT-ID: singularity.jira.com
+Cache-Control: no-cache, no-store, no-transform
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID=8A1DF351A442D88B890B5CD0361F73C0; Path=/; Secure; HttpOnly
+Set-Cookie: atlassian.xsrf.token=AG87-S37R-QM8W-6VWE|fc972be9d7b09aec5e7a32d9feb0007a64a4a672|lin; Path=/; Secure
+Strict-Transport-Security: max-age=315360000;includeSubDomains
+
+110000        1182        00          00    11000 0      1 81 2         0       6  0  0 : 0 0 : 043   0: 000::0002: 0 30 : 000::0001:02  0: 0 0 : 0 16 
+    4
+HTTP/1.1 204 No Content
+Server: nginx
+Date: Tue, 14 Mar 2017 13:18:39 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+X-AREQUESTID: 378x152266x3
+X-AUSERNAME: gaurav.soni
+X-ATENANT-ID: singularity.jira.com
+Cache-Control: no-cache, no-store, no-transform
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID=7C42EE8C2291A21C2F90AC79B01EF466; Path=/; Secure; HttpOnly
+Set-Cookie: atlassian.xsrf.token=AG87-S37R-QM8W-6VWE|8724d311d316824b5a6ef10bc0ae4154468d3924|lin; Path=/; Secure
+Strict-Transport-Security: max-age=315360000;includeSubDomains
+
+HTTP/1.1 204 No Content
+Server: nginx
+Date: Tue, 14 Mar 2017 13:18:39 GMT
+Content-Type: application/json;charset=UTF-8
+Content-Length: 0
+Connection: keep-alive
+X-AREQUESTID: 378x152271x8
+X-AUSERNAME: gaurav.soni
+X-ATENANT-ID: singularity.jira.com
+Cache-Control: no-cache, no-store, no-transform
+X-Content-Type-Options: nosniff
+Set-Cookie: JSESSIONID=37164284D213ECB805ED8A7598408D0C; Path=/; Secure; HttpOnly
+Set-Cookie: atlassian.xsrf.token=AG87-S37R-QM8W-6VWE|4b858f33eb79708656649c14b0cce0c5daa7150b|lin; Path=/; Secure
+Strict-Transport-Security: max-age=315360000;includeSubDomains
+
