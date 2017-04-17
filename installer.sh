@@ -74,12 +74,16 @@ _installEventsService()
     `cp ${USER_HOME}/Downloads/${2}/events-service.zip ${APPD_ENV_HOME}`
     `unzip ${APPD_ENV_HOME}/events-service.zip -d ${APPD_ENV_HOME}`
     `rm ${APPD_ENV_HOME}/events-service.zip`
-    KEY=`${APPD_ENV_HOME}/Controller/db/bin/mysql -uroot -p${PASSWORD} -s -N -e "SELECT value FROM global_configuration where name='appdynamics.analytics.server.store.controller.key'" controller`
+    if [[ ${VERSION} == 4\.3\.* ]]; then
+        KEY=`${APPD_ENV_HOME}/Controller/db/bin/mysql -uroot -p${PASSWORD} -s -N -e "SELECT value FROM global_configuration where name='appdynamics.on.premise.event.service.key'" controller`
+    else
+        KEY=`${APPD_ENV_HOME}/Controller/db/bin/mysql -uroot -p${PASSWORD} -s -N -e "SELECT value FROM global_configuration where name='appdynamics.analytics.server.store.controller.key'" controller`
+    fi
     echo ${KEY}
     sed -e "s|ad.accountmanager.key.controller=|ad.accountmanager.key.controller=${KEY}|g" "${APPD_ENV_HOME}/events-service/conf/events-service-api-store.properties" > ${APPD_ENV_HOME}/events-service/conf/events-service-api-store-tmp.properties
     swap_configs
     set_java_home
-    ${APPD_ENV_HOME}/events-service/bin/events-service.sh start -p ./conf/events-service-api-store.properties &
+    ${APPD_ENV_HOME}/events-service/bin/events-service.sh start -p ${APPD_ENV_HOME}/events-service/conf/events-service-api-store.properties &
     
     return
 }
