@@ -16,7 +16,12 @@ CONTROLLER_HOME="${APPD_HOME}/$2/Controller"
 set_java_home()
 {
     echo "setting up JAVA_HOME..."
-    eval "export JAVA_HOME=${CONTROLLER_HOME}/jre8"
+    if [[ ${VERSION} == 4\.1\.* ]]; then
+        eval "export JAVA_HOME=${CONTROLLER_HOME}/jre"
+    else
+        eval "export JAVA_HOME=${CONTROLLER_HOME}/jre8"
+    fi
+    
     echo "JAVA_HOME set"
     echo "using JAVA_HOME as $JAVA_HOME"
 
@@ -44,10 +49,18 @@ _modifyVarfile()
 {
     if [ "$1" != "controller" ]
     then
-      KEY=`${APPD_ENV_HOME}/Controller/db/bin/mysql -uroot -p${PASSWORD} -s -N -e "SELECT value FROM global_configuration where name='appdynamics.es.eum.key'" controller`
-      sed -e "s/\${PASSWORD}/${PASSWORD}/" -e "s/\${HOST}/${HOSTNAME}/" -e "s|\${KEY}|${KEY}|g" -e "s|\${ENV_HOME}|${APPD_ENV_HOME}|g" "./eum.varfile"  > ${USER_HOME}/eum_tmp.varfile
+        echo "EUM varfile..."
+        KEY=`${APPD_ENV_HOME}/Controller/db/bin/mysql -uroot -p${PASSWORD} -s -N -e "SELECT value FROM global_configuration where name='appdynamics.es.eum.key'" controller`
+        sed -e "s/\${PASSWORD}/${PASSWORD}/" -e "s/\${HOST}/${HOSTNAME}/" -e "s|\${KEY}|${KEY}|g" -e "s|\${ENV_HOME}|${APPD_ENV_HOME}|g" "./eum.varfile"  > ${USER_HOME}/eum_tmp.varfile
     else
-      sed -e "s/\${PASSWORD}/${PASSWORD}/" -e "s/\${HOST}/${HOSTNAME}/" -e "s|\${ENV_HOME}|${APPD_ENV_HOME}|g" "./controller.varfile" > ${USER_HOME}/controller_tmp.varfile
+        echo "Controller varfile..."
+        if [ ${2} \< "4.3" ]; then
+            echo "less then 4.3"
+            sed -e "s/\${PASSWORD}/${PASSWORD}/" -e "s/\${HOST}/${HOSTNAME}/" -e "s|\${ENV_HOME}|${APPD_ENV_HOME}|g" "./controller.varfile" > ${USER_HOME}/controller_tmp.varfile
+        else
+            echo "greater or equals to 4.3"
+            sed -e "s/\${PASSWORD}/${PASSWORD}/" -e "s/\${HOST}/${HOSTNAME}/" -e "s|\${ENV_HOME}|${APPD_ENV_HOME}|g" "./controller4.3.varfile" > ${USER_HOME}/controller_tmp.varfile
+        fi 
     fi
     
     return
@@ -74,16 +87,26 @@ _installEventsService()
     `cp ${USER_HOME}/Downloads/${2}/events-service.zip ${APPD_ENV_HOME}`
     `unzip ${APPD_ENV_HOME}/events-service.zip -d ${APPD_ENV_HOME}`
     `rm ${APPD_ENV_HOME}/events-service.zip`
-    if [[ ${VERSION} == 4\.3\.* ]]; then
-        KEY=`${APPD_ENV_HOME}/Controller/db/bin/mysql -uroot -p${PASSWORD} -s -N -e "SELECT value FROM global_configuration where name='appdynamics.on.premise.event.service.key'" controller`
-    else
+
+    if [ ${2} \< "4.3" ]; then
+        echo "less then 4.3"
         KEY=`${APPD_ENV_HOME}/Controller/db/bin/mysql -uroot -p${PASSWORD} -s -N -e "SELECT value FROM global_configuration where name='appdynamics.analytics.server.store.controller.key'" controller`
-    fi
+    else
+        echo "greater or equals to 4.3"
+        KEY=`${APPD_ENV_HOME}/Controller/db/bin/mysql -uroot -p${PASSWORD} -s -N -e "SELECT value FROM global_configuration where name='appdynamics.on.premise.event.service.key'" controller`
+    fi 
+
     echo ${KEY}
     sed -e "s|ad.accountmanager.key.controller=|ad.accountmanager.key.controller=${KEY}|g" "${APPD_ENV_HOME}/events-service/conf/events-service-api-store.properties" > ${APPD_ENV_HOME}/events-service/conf/events-service-api-store-tmp.properties
     swap_configs
     set_java_home
-    ${APPD_ENV_HOME}/events-service/bin/events-service.sh start -p ${APPD_ENV_HOME}/events-service/conf/events-service-api-store.properties &
+    if [ "$VERSION" \< "4.2" ]; then
+        echo "Working on a 4.2- version"
+        ${APPD_ENV_HOME}/events-service/bin/events-service.sh start -y ${APPD_ENV_HOME}/events-service/conf/events-service-all.yml -p ${APPD_ENV_HOME}/events-service/conf/events-service-all.properties &
+    else
+        echo "Working on a 4.2+ version"
+        ${APPD_ENV_HOME}/events-service/bin/events-service.sh start -p ${APPD_ENV_HOME}/events-service/conf/events-service-api-store.properties &
+    fi
     
     return
 }
@@ -95,7 +118,14 @@ _installEUM()
     swap_configs
     set_java_home
     eval "${APPD_ENV_HOME}/events-service/bin/events-service.sh stop"
-    eval "${APPD_ENV_HOME}/events-service/bin/events-service.sh start -p ${APPD_ENV_HOME}/events-service/conf/events-service-api-store.properties &"
+    if [ "$VERSION" \< "4.2" ]; then
+        echo "Working on a 4.2- version"
+        ${APPD_ENV_HOME}/events-service/bin/events-service.sh start -y ${APPD_ENV_HOME}/events-service/conf/events-service-all.yml -p ${APPD_ENV_HOME}/events-service/conf/events-service-all.properties &
+    else
+        echo "Working on a 4.2+ version"
+        ${APPD_ENV_HOME}/events-service/bin/events-service.sh start -p ${APPD_ENV_HOME}/events-service/conf/events-service-api-store.properties &
+    fi
+    
     eval "sh ${USER_HOME}/Downloads/${2}/euem-64bit-linux.sh -q -varfile ${USER_HOME}/eum_tmp.varfile"
     eval "rm ${USER_HOME}/eum_tmp.varfile"
     

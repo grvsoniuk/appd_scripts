@@ -44,34 +44,34 @@
 	"buffers":
 	[
 		{
-			"file": "/home/ubuntu1/appdynamics/4.3.0.0/events-service/conf/events-service-api-store.yml",
+			"file": "appd.sh",
 			"settings":
 			{
-				"buffer_size": 31582,
+				"buffer_size": 2329,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/ubuntu1/appdynamics/4.3.0.0/events-service/plugins/cloud-aws/plugin-descriptor.properties",
+			"file": "installer.sh",
 			"settings":
 			{
-				"buffer_size": 2706,
+				"buffer_size": 5972,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/ubuntu1/appdynamics/4.3.0.0/events-service/plugins/cloud-aws/plugin-security.policy",
+			"file": "/home/ubuntu1/appdynamics/4.1.3.1/events-service/conf/events-service-api-store.properties",
 			"settings":
 			{
-				"buffer_size": 1071,
+				"buffer_size": 4758,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "controller.varfile",
+			"file": "/home/ubuntu1/appdynamics/4.1.3.1/EUM/eum-processor/bin/eum.properties",
 			"settings":
 			{
-				"buffer_size": 630,
+				"buffer_size": 648,
 				"line_ending": "Unix"
 			}
 		}
@@ -112,8 +112,17 @@
 	],
 	"file_history":
 	[
-		"/home/ubuntu1/appdynamics/4.3.0.0/events-service/conf/events-service-api-store.properties.j2",
+		"/home/ubuntu1/appdynamics/4.1.3.1/events-service/conf/events-service-api-store.properties",
+		"/home/ubuntu1/appdynamics/4.1.3.1/events-service/conf/events-service-all.properties",
+		"/home/ubuntu1/appdynamics/4.3.0.3/events-service/conf/events-service-api-store.properties",
+		"/home/ubuntu1/appdynamics/4.3.0.3/Controller/license.lic",
+		"/home/ubuntu1/appdynamics/4.3.0.3/EUM/eum-processor/bin/eum.properties",
+		"/home/ubuntu1/appdynamics/4.3.0.0/events-service/conf/events-service-api-store.yml",
 		"/home/ubuntu1/appdynamics/appd_scripts/installer.sh",
+		"/home/ubuntu1/appdynamics/appd_scripts/controller.varfile",
+		"/home/ubuntu1/appdynamics/4.3.0.0/events-service/plugins/cloud-aws/plugin-security.policy",
+		"/home/ubuntu1/appdynamics/4.3.0.0/events-service/plugins/cloud-aws/plugin-descriptor.properties",
+		"/home/ubuntu1/appdynamics/4.3.0.0/events-service/conf/events-service-api-store.properties.j2",
 		"/home/ubuntu1/appdynamics/4.2.6.0/Controller/bin/controller.sh",
 		"/home/ubuntu1/appdynamics/4.2.6.0/Controller/license.lic",
 		"/home/ubuntu1/appdynamics/4.2.9.2/EUM/logs/DroppedBeacons.log",
@@ -138,7 +147,6 @@
 		"/home/ubuntu1/Downloads/controller_64bit_linux-4.2.12.0.sh",
 		"/home/ubuntu1/appdynamics/4.2.12.0/events-service/conf/events-service-api-store.properties",
 		"/home/ubuntu1/appdynamics/4.2.9.2/EUM/eum-processor/bin/eum.properties",
-		"/home/ubuntu1/appdynamics/appd_scripts/controller.varfile",
 		"/home/ubuntu1/appdynamics/4.2.11.0/Controller/platform_admin/playbooks/es_orcha_files/restart-es.orcha",
 		"/home/ubuntu1/appdynamics/4.2.11.0/Controller/platform_admin/bin/platform-admin.sh",
 		"/home/ubuntu1/appdynamics/4.2.3.1/Controller/license.lic",
@@ -182,9 +190,7 @@
 		"/home/ubuntu1/appdynamics/4.1.5.0/Controller/appserver/glassfish/domains/domain1/config/domain.xml",
 		"/home/ubuntu1/appdynamics/4.2.6.0/EUM/eum-processor/bin/eum-processor-launcher.vmoptions",
 		"/home/ubuntu1/Downloads/4.1.3.1/events-service/conf/events-service-all.properties",
-		"/home/ubuntu1/appdynamics/4.1.3.1/events-service/conf/events-service-all.properties",
 		"/home/ubuntu1/appdynamics/4.1.3.1/Controller/appserver/glassfish/domains/domain1/config/domain.xml",
-		"/home/ubuntu1/appdynamics/4.1.3.1/events-service/conf/events-service-api-store.properties",
 		"/home/ubuntu1/appdynamics/4.2.5.0/EUM/eum-processor/bin/eum.properties",
 		"/home/ubuntu1/appdynamics/4.2.5.0/EUM/logs/eum-processor.log",
 		"/home/ubuntu1/appdynamics/4.2.5.0/events-service/conf/events-service-api-store.yml",
@@ -222,6 +228,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"synth",
 			"cloud",
 			"aws",
 			"_startEventsService",
@@ -284,34 +291,34 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/home/ubuntu1/appdynamics/4.3.0.0/events-service/conf/events-service-api-store.yml",
+					"file": "appd.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 31582,
+						"buffer_size": 2329,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								925,
+								925
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/YAML/YAML.sublime-syntax",
-							"tab_size": 2,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 23.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
@@ -319,11 +326,41 @@
 				},
 				{
 					"buffer": 1,
-					"file": "/home/ubuntu1/appdynamics/4.3.0.0/events-service/plugins/cloud-aws/plugin-descriptor.properties",
+					"file": "installer.sh",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2706,
+						"buffer_size": 5972,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4774,
+								4774
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 801.0,
+						"translation.y": 969.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/ubuntu1/appdynamics/4.1.3.1/events-service/conf/events-service-api-store.properties",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4758,
 						"regions":
 						{
 						},
@@ -339,66 +376,38 @@
 							"syntax": "Packages/Java/JavaProperties.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 816.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/home/ubuntu1/appdynamics/4.3.0.0/events-service/plugins/cloud-aws/plugin-security.policy",
+					"buffer": 3,
+					"file": "/home/ubuntu1/appdynamics/4.1.3.1/EUM/eum-processor/bin/eum.properties",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1071,
+						"buffer_size": 648,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								504,
+								504
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/Java/JavaProperties.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "controller.varfile",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 630,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
 					"type": "text"
 				}
 			]
