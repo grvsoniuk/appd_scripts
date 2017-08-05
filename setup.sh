@@ -12,4 +12,5 @@ sudo apt-get install sublime-text
 sudo apt-get install libaio1
 sudo apt-get install openssh-server 
 sudo apt install openjdk-8-jre-headless
+sudo apt install net-tools
 sudo apt-get install libaio1
