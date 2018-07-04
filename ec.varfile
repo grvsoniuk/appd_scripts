@@ -1,0 +1,12 @@
+serverHostName=${HOST}
+sys.languageId=en
+disableEULA=true
+
+platformAdmin.port=9191
+platformAdmin.databasePort=3377
+platformAdmin.dataDir=${ENV_HOME}/platform/mysql/data
+platformAdmin.databasePassword=${PASSWORD}
+platformAdmin.databaseRootPassword=${PASSWORD}
+platformAdmin.adminPassword=${PASSWORD}
+platformAdmin.useHttps$Boolean=false
+sys.installationDir=${ENV_HOME}/platform

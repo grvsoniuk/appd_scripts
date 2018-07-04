@@ -4,26 +4,45 @@
 
 # Variables configured by the installer
 
-VERSION="$2"
+VERSION=""
+INSTALL_DIR=$2
 CURRENT_DIR="${pwd}"
 HOSTNAME="$(id -u -n)"
 USER_HOME="/home/${HOSTNAME}"
 APPD_HOME="${USER_HOME}/appdynamics"
-APPD_EVN_HOME="${APPD_HOME}/${VERSION}"
-EVENTS_SERVICE_HOME="${APPD_HOME}/$2/events-service"
-EUM_HOME="${APPD_HOME}/$2/EUM"
-CONTROLLER_HOME="${APPD_HOME}/$2/Controller"
+APPD_ENV_HOME="${APPD_HOME}/${INSTALL_DIR}"
+EVENTS_SERVICE_HOME="${APPD_ENV_HOME}/events-service"
+EUM_HOME="${APPD_ENV_HOME}/EUM"
+CONTROLLER_HOME="${APPD_ENV_HOME}/controller"
 
 _set_java_home()
 {
-    eval "export JAVA_HOME=${CONTROLLER_HOME}/jre8"
+    echo "setting up JAVA_HOME..."
+    if [[ ${1} == 4\.1\.* ]]; then
+        eval "export JAVA_HOME=${CONTROLLER_HOME}/jre"
+    else
+        if [[ ${1} == 4\.4\.* ]]; then
+            cd ${APPD_ENV_HOME}/jre
+            pwd
+            for d in * ; do
+                export JAVA_HOME=${APPD_ENV_HOME}/jre/$d
+            done
+            cd $CURRENT_DIR
+        else
+            eval "export JAVA_HOME=${CONTROLLER_HOME}/jre8"
+        fi
+    fi
+    
+    echo "JAVA_HOME set"
+    echo "using JAVA_HOME as $JAVA_HOME"
+
     return
 }
 
 _isESRunning()
 {
-    echo "sleeping for 10 seconds"
-    sleep 10
+    echo "sleeping for 30 seconds"
+    sleep 30
 
     ps -ef | grep java|grep com.appdynamics.analytics.processor.AnalyticsService
     RESULT=$?
@@ -48,8 +67,11 @@ return
 _startEventsService()
 {
 echo "Starting Events Service..."
+VERSION=$(cat "${USER_HOME}/Downloads/${INSTALL_DIR}/controller_version.txt")
+_set_java_home $VERSION
+
 cd "$EVENTS_SERVICE_HOME"
-_set_java_home
+pwd
 
 if [ "$VERSION" \< "4.2" ]; then
     echo "Working on a 4.2- version"
@@ -64,7 +86,8 @@ return
 
 _stopEventsService()
 {
-_set_java_home
+VERSION=$(cat "${USER_HOME}/Downloads/${INSTALL_DIR}/controller_version.txt")
+_set_java_home $VERSION
 cd "$EVENTS_SERVICE_HOME"
 ./bin/events-service.sh stop
 
@@ -91,7 +114,7 @@ _stopEUM()
 cd "$EUM_HOME/eum-processor"
 ./bin/eum.sh stop
 
-sleep 10
+sleep 30
 
 return
 }
@@ -106,8 +129,8 @@ _setup()
 
 _purge()
 {
-    eval "sh ./appd.sh stop ${VERSION}"
-    eval "rm -rf ${APPD_EVN_HOME}"
+    eval "sh ./appd.sh stop $2"
+    eval "rm -rf ${APPD_ENV_HOME}"
 
     return
 }
@@ -126,7 +149,7 @@ case $1 in
     setup)
         _setup $*;;
     purge)
-        _purge;;
+        _purge $*;;
     *)
         echo "usage: appd.sh [start|stop] <4.x.x.x>"
 	echo ;;
